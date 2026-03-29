@@ -1,0 +1,7 @@
+node_modules
+.env
+*.log
+dist
+.firebaserc
+functions/src/secret.json
+src/router.ts

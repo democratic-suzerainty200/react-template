@@ -1,0 +1,18 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+
+  "compilerOptions": {
+    /* Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    /* Set JSON as the type */
+    "resolveJsonModule": true
+  }
+}
