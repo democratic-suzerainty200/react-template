@@ -2,13 +2,12 @@
 
 import { Link } from "@/router"
 import { useTranslation } from "react-i18next"
-import { useAuthState } from "react-firebase-hooks/auth"
+import { useAuthStore } from "@/store/auth"
 import { env } from "@/lib/env"
-import { auth } from "@/lib/firebase"
 
 export function FooterBlocks() {
   const { t } = useTranslation()
-  const [user, loading] = useAuthState(auth)
+  const { user, loading } = useAuthStore()
 
   return (
     <footer className="p-5 mt-auto w-full border-t flex flex-col gap-5">

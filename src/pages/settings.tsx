@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next"
 // Components
 import { HeaderBlocks } from "@/components/mine/blocks/header"
 import { FooterBlocks } from "@/components/mine/blocks/footer"
-import { AccountSettingsBlock } from "@/components/mine/pages/settings/blocks/account"
-import { AccessibilitySettingsBlock } from "@/components/mine/pages/settings/blocks/accessibility"
+import { AccountSettingsBlock } from "@/components/mine/pages/settings/account"
+import { AccessibilitySettingsBlock } from "@/components/mine/pages/settings/accessibility"
 
 function Parent({ children }: { children: React.ReactNode }) {
   return (

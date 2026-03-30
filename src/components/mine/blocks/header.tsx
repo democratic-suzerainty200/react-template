@@ -3,10 +3,9 @@
 import { Link } from "@/router"
 import { LogIn, Settings } from "lucide-react"
 import { useTranslation } from "react-i18next"
-import { useAuthState } from "react-firebase-hooks/auth"
 import { cn } from "@/lib/utils"
-import { auth } from "@/lib/firebase"
 import { env } from "@/lib/env"
+import { useAuthStore } from "@/store/auth"
 
 // Components
 import { Button } from "@/components/ui/button"
@@ -68,7 +67,7 @@ function Signout({ fixed }: Header) {
 }
 
 export function HeaderBlocks(props: Header) {
-  const [user, loading] = useAuthState(auth)
+  const { user, loading } = useAuthStore()
 
   if (!loading) {
     if (user) {

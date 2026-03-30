@@ -1,7 +1,7 @@
 // This file changes the theme from the theme store.
 
 import { useEffect } from "react"
-import { useThemeStore } from "@/hooks/store/theme"
+import { useThemeStore } from "@/store/theme"
 
 export function useThemeSetup() {
   const { dark } = useThemeStore()

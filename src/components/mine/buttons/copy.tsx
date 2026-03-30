@@ -15,14 +15,7 @@ export function CopyButton({ text, className, ...props }: { text?: string; class
     setTimeout(() => setIsClicked(false), 5000)
   }
 
-  if (!text) {
-    return (
-      <Button className={cn("w-50", className)} variant="outline" {...props}>
-        <p className="w-40 overflow-hidden truncate text-left">Loading...</p>
-        <Copy className="cursor-pointer w-10" />
-      </Button>
-    )
-  }
+  if (!text) return
 
   return (
     <Button className={cn("w-50", className)} onClick={handleCopy} variant="outline" {...props}>

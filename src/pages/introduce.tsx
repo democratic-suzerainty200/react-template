@@ -21,7 +21,7 @@ export default function App() {
       <div className="min-h-svh overflow-hidden px-4">
         <FadeinAnimation className="flex flex-col gap-8 justify-center min-h-svh items-center">
           <TypeAnimation
-            className="text-4xl font-mono text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono text-center"
             sequence={[t("title.introduce"), 4000, env.title, 4000]}
             speed={50}
             repeat={Infinity}
