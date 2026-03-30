@@ -76,4 +76,6 @@ export function HeaderBlocks(props: Header) {
       return <Signout {...props} />
     }
   }
+
+  return null
 }
