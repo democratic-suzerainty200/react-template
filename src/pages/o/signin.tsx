@@ -23,7 +23,7 @@ export default function App() {
     <div className="flex min-h-svh flex-col items-center justify-center px-4 overflow-hidden">
       <FadeinAnimation className="w-full max-w-sm">
         <div className="flex flex-col gap-6">
-          <form>
+          <div>
             <FieldGroup>
               <div className="flex flex-col items-center gap-2 text-center px-6">
                 <Link to="/introduce">
@@ -83,7 +83,7 @@ export default function App() {
                 </SignLoadingButton>
               </Field>
             </FieldGroup>
-          </form>
+          </div>
 
           <FieldDescription className="px-6 text-center">
             {t("common.sign.warning")} <Link to="/terms">{t("pages.terms.title")}</Link> & <Link to="/privacy">{t("pages.privacy.title")}</Link>

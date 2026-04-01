@@ -170,7 +170,7 @@ async function createEnv() {
   // Update translate files
   function updateTranslate(path: string) {
     const file = JSON.parse(fs.readFileSync(path, "utf8"))
-    file.title.introduce = env.description
+    file.title.introduce = env.VITE_DESCRIPTION
     fs.writeFileSync(path, JSON.stringify(file, null, 2))
   }
 
@@ -180,7 +180,7 @@ async function createEnv() {
   // Creating .firebaserc
   fs.writeFileSync(".firebaserc", JSON.stringify({
     projects: {
-      default: env.firebase_project_id
+      default: env.VITE_FIREBASE_PROJECT_ID
     }
   }, null, 2))
 

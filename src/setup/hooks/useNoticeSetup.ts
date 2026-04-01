@@ -35,5 +35,5 @@ export function useNoticeSetup() {
 				})
 			}
 		})()
-	}, [noticeMode, loading, setNoticeMode, t])
+	}, [noticeMode, loading, setNoticeMode])
 }

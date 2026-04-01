@@ -4,6 +4,11 @@
       "name": "VITE_TITLE",
       "message": "App title"
     },
+
+    {
+      "name": "VITE_DESCRIPTION",
+      "message": "App description"
+    },
     
     {
       "name": "VITE_FIREBASE_API_KEY",
@@ -38,6 +43,11 @@
     {
       "name": "VITE_FIREBASE_MEASUREMENT_ID",
       "message": "Firebase Measurement ID"
+    },
+
+    {
+      "name": "VITE_FIREBASE_VAP_ID_KEY",
+      "message": "Firebase VAP ID Key"
     },
 
     {

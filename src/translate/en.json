@@ -171,6 +171,13 @@
       "title": "ERROR",
       "main": "An error has occurred.",
       "noData": "No data available."
+    },
+
+    "notice": {
+      "on": {
+        "title": "Notice is subscribed!",
+        "description": "You completed notice subscription. You can receive the infomation form now on."
+      }
     }
   }
 }

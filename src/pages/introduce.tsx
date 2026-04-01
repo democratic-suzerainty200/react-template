@@ -6,6 +6,7 @@ import { env } from "@/lib/env"
 import { cn } from "@/lib/utils"
 import { TypeAnimation } from "react-type-animation"
 import { useTranslation } from "react-i18next"
+import { useMediaWidth } from "@/hooks/useMediaWidth"
 
 // Components
 import { Button } from "@/components/ui/button"
@@ -29,6 +30,7 @@ function Parent({ children, title, className }: { children: React.ReactNode, tit
 
 export default function App() {
   const { t } = useTranslation()
+  const { isMobile } = useMediaWidth()
 
   type FeaturesData = {
     title: string
@@ -76,7 +78,7 @@ export default function App() {
             const delay = index * 0.1
 
             return (
-              <SeeFadeinAnimation delay={delay} key={feature.title} className="w-85 bg-muted/30 p-5 rounded-xl flex flex-col gap-4">
+              <SeeFadeinAnimation delay={isMobile ? 0 : delay} key={feature.title} className="w-85 bg-muted/30 p-5 rounded-xl flex flex-col gap-4">
                 <div className="flex items-center gap-4">
                   <div className={`p-2 ${color} text-white w-fit rounded-sm`}>
                     <Icon className="size-6" />

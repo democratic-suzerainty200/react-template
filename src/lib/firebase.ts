@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app"
 import { getAuth, connectAuthEmulator } from "firebase/auth"
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore"
 import { getFunctions, connectFunctionsEmulator } from "firebase/functions"
+import { getMessaging } from "firebase/messaging"
 import { env } from "@/lib/env"
 
 const firebaseConfig = {
@@ -21,6 +22,7 @@ const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
 export const db = getFirestore(app)
 export const functions = getFunctions(app)
+export const messaging = getMessaging()
 
 // Connect to emulators in development mode
 if (env.dev) {
