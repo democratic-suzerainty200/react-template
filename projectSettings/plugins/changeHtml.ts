@@ -1,17 +1,17 @@
 // This file is vite plugin for changing html by env.
 
 import { type Plugin, loadEnv } from "vite"
-import translateFile from "../../src/translate/en.json"
 
-export function changeHtml(): Plugin {
+export default function plugin(): Plugin {
   return {
     name: "Change HTML",
 
     transformIndexHtml(html) {
       const env = loadEnv("", process.cwd())
+
       // Get env
       const title = env.VITE_TITLE
-      const description = translateFile.pages.introduce.title
+      const description = env.VITE_DESCRIPTION
 
       // Change
       return html.replace(

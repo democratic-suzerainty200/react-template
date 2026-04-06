@@ -5,18 +5,17 @@
 - [使用技術](#使用技術)
 - [セットアップ方法](#セットアップ方法)
 - [ファイル構成](#ファイル構成)
-- [ライセンス](#ライセンス)
 - [ルール](#ルール)
+- [ライセンス](#ライセンス)
 
 ## 概要
 <p align="center">
   <img src="./settings/screenshots/ja.png" width="70%">
 </p>
 
-- このプロジェクトはフルスタックエンジニアがよく使う技術を使用したReactでできているテンプレートです。
+- このプロジェクトはReactなどの最先端技術で作られているモダンでおしゃれなテンプレートです。
 
 ## 使用技術
-- 以下は使用する技術を書いています。
 - メイン
   - React
   - TypeScript
@@ -36,16 +35,16 @@
   - Zustand
   - i18next
   - react-firebase-hooks
-    - FirebaseをReactのHooksで簡単に使えるもの
+    - FirebaseをReactのHooksで簡単に使えるライブラリです
 - ルーター
   - react-router-dom
   - Generouted
     - `pages`から自動作成するライブラリ
 - サービス
-  - Sentry
   - Cloudflare
     - Pages
     - Registrar
+      - 必要な方は使用してください。
   - Firebase
     - Authentication
     - Firestore
@@ -56,55 +55,47 @@
 ## セットアップ方法
 - Node.js、Java、プロジェクト依存のインストール
   - こちらは省略させていただきます
-  - Javaは`Firebase emulator`を起動するため必要です。
+  - JavaはFirebase emulatorを起動するため必要です。
 
 - Firebaseプロジェクトの作成
   - `Firebase Console`にアクセスしてプロジェクトを作成してください。
   - `Blazeプラン`にしてください。
   - AuthenticationでEmail、Google、匿名のログインを有効にしてください。
+  - 環境変数をメモしておいてください。
+    - VAP IDキーも必要です
 
 - Firebase CLIにログイン
-  - `npm install -g firebase-tools`で`Firebase CLI`をインストールしてください。
+  - `npm install -g firebase-tools`でFirebase CLIをインストールしてください。
   - `firebase login`でプロジェクトを作成したアカウントでログインしてください。
 
 - scripts/secret.jsonの設定
-  - `Firebase Console`で`プロジェクトの設定`の`サービスアカウント`に移動してください。
-  - `Firebase Admin SDK`の`新しい秘密鍵を作成`を押してダウンロードしたJSONの名前を`secret.json`に変更して`functions/src`配下に配置してください。
+  - Firebase Consoleで`プロジェクトの設定/サービスアカウント`に移動してください。
+  - `Firebase Admin SDK`から新しい秘密鍵を作成して、ダウンロードしたJSONの名前を`secret.json`に変更して`functions/src`配下に配置してください。
 
-## その他手作業で変更しないといけない部分
-- デザイン系
-  - 以下は同じ色にするととても一貫性が出てよりモダンになります。
-  - `public/files/icons/icon.svg`を任意のsvgファイルに置き換えてください。
-  - `src/index.css`のprimaryのCSS変数を任意のカラーに変更してください。(darkも)
-- サイトマップ
-  - `public/sitemap.xml`のドメインを自分の公開するURLに変更してください。
-  - `public/robots.txt`も変更してください。
+- その他手作業で変更する部分
+  - デザイン系
+    - `public/files/icons/icon.svg`を任意のsvgファイルに置き換えてください。
+    - `src/index.css`のprimaryのCSS変数を任意の色に変更してください。
+      - ダークモードも変更してください。
 
 - セットアップコマンドの実行
   - `npm run setup`で`Normal setup`を選んで画面の通りに必要事項を入力してください。
 
 - 開発時
-  - `Firebase Emulator`は初期化が必要なので同じく`npm run setup`で`Only emulator`を選択して初期化をしてください。
+  - `Firebase Emulator`は初期化が必要なので同じく`npm run setup`で`Emulator setup`を選択して初期化をしてください。
+    - 管理者権限を追加するときは`Admin role setup`を選択してください。
 
 - デプロイ
-  - GitHubにプロジェクトを公開してください。
-  - `Cloudflare Pages`にGitHub経由でリポジトリを接続して下さい。
-    - フレームワークは`React(Vite)`を選択して環境変数も記入してください。
+  - Cloudflare pagesだと簡単にデプロイが可能です。
+    - こちらも説明を省かせてもらいます
 
 ## ファイル構成
-- ほぼすべてのファイルは一行目のコメントで説明してます。
-- 説明不要なファイルは省かせていただきます。
-- コメントできないファイルは以下に説明をまとめておきます。
-  - indexとついたファイル
-    - 基本的に何かのメインファイルです。
-  - functions/src/secret.json
-    - `secret.json`のコピーです。
-    - セットアップスクリプトと`Firebase Functions`が使います。
-
-## ライセンス
-- このプロジェクトはMIT Licenseのもとで公開されています。
+- ほぼすべてのファイルは最初にコメントで説明されています。
+- `index`とついた名前のファイルは基本的に何かのメインファイルになっています。
 
 ## ルール
 - [コードルール](./projectSettings/docs/codeRule.md)
 - [デザインルール](./projectSettings/docs/designRule.md)
-- [GitHubルール](./projectSettings/docs/githubRule.md)
+
+## ライセンス
+- このプロジェクトはMIT Licenseのもとで公開されています。

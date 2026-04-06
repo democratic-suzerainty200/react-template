@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "emulator": "firebase emulators:start",
     "deploy": "firebase deploy",
-    "setup": "tsx projectSettings/scripts/setup.js",
+    "setup": "tsx projectSettings/scripts/setup/index.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
