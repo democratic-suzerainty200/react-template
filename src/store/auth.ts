@@ -1,4 +1,4 @@
-// This file is auth store.
+// This store manages auth state.
 
 import { create } from "zustand"
 import type { User } from "firebase/auth"

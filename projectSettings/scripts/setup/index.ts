@@ -1,4 +1,5 @@
-// This file is setup scripts.
+// This file is main setup script.
+// You will not be using it.
 
 import figlet from "figlet"
 import chalk from "chalk"

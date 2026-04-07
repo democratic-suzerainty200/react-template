@@ -1,4 +1,4 @@
-// This file changes the theme from the theme store.
+// This setup hooks manages theme of settings.
 
 import { useEffect } from "react"
 import { useThemeStore } from "@/store/theme"

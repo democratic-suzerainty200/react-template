@@ -1,16 +1,14 @@
-// This setup hooks manages notice permissions.
+// This setup hooks manages notice mode of settings.
 
 import { useEffect } from "react"
 import { toast } from "sonner"
 import { useNoticeStore } from "@/store/notice"
 
 // Hooks
-import { useLoading } from "@/hooks/loading"
 import { useTranslation } from "react-i18next"
 
 export function useNoticeSetup() {
 	const { noticeMode, setNoticeMode } = useNoticeStore()
-	const { loading } = useLoading()
 	const { t } = useTranslation()
 
 	useEffect(() => {
@@ -35,5 +33,5 @@ export function useNoticeSetup() {
 				})
 			}
 		})()
-	}, [noticeMode, loading, setNoticeMode])
+	}, [noticeMode, setNoticeMode])
 }

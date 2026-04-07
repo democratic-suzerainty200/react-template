@@ -1,4 +1,4 @@
-// This file changes the title from useTitle.
+// This setup hooks manages title.
 
 import { useEffect } from "react"
 import { env } from "@/lib/env"

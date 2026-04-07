@@ -1,4 +1,5 @@
-// This file is vite plugin for changing html by env.
+// This plugin is used to change the HTML file.
+// You will not be using it.
 
 import { type Plugin, loadEnv } from "vite"
 

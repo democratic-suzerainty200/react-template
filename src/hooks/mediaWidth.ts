@@ -31,6 +31,7 @@ function useMedia(query: string, initialValue = false) {
 
     mediaQuery.addEventListener("change", onChange)
 
+    // Cleanup
     return () => {
       mediaQuery.removeEventListener("change", onChange)
     }

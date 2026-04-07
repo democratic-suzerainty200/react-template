@@ -1,3 +1,6 @@
+// This module is used to set up the emulator mode.
+// You will not be using it.
+
 import admin from "firebase-admin"
 import { createFirestore } from "../lib/createFirestore"
 import type { ServiceAccount } from "firebase-admin"

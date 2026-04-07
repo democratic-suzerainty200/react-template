@@ -1,3 +1,5 @@
+// This file defines functions that call Firebase Functions.
+
 import { httpsCallable } from "firebase/functions"
 import { functions } from "@/lib/firebase"
 

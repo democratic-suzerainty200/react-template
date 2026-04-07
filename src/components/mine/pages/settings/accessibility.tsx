@@ -5,18 +5,18 @@ import { messaging } from "@/lib/firebase"
 import { getToken } from "firebase/messaging"
 import { doc, setDoc } from "firebase/firestore"
 import { db } from "@/lib/firebase"
+import { subscribeAll } from "@/lib/functions"
 
 // Store
 import { useNoticeStore } from "@/store/notice"
 import { useThemeStore } from "@/store/theme"
 import { useAuthStore } from "@/store/auth"
 
-// Components
+// Shacn components
 import { Switch } from "@/components/ui/switch"
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ChildParts } from "@/components/mine/parts/child"
 import { ParentParts } from "@/components/mine/parts/parent"
-import { subscribeAll } from "@/lib/functions"
 
 export function AccessibilitySettingsBlock() {
   const { t, i18n } = useTranslation()

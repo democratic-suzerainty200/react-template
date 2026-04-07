@@ -1,3 +1,6 @@
+// This module is used to output prompts.
+// You will not be using it.
+
 import prompts from "prompts"
 import { log } from "./log"
 

@@ -1,3 +1,6 @@
+// This module is used to create Firestore data.
+// You will not be using it.
+
 // Modules
 import { log } from "../../../modules/log"
 import { inputPrompts } from "../../../modules/prompts"

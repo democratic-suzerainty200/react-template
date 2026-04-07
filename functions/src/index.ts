@@ -14,7 +14,7 @@ setGlobalOptions({
   maxInstances: 10
 })
 
-function confirm(req: CallableRequest<any>, type: "user" | "admin") {
+function confirmUserState(req: CallableRequest<any>, type: "user" | "admin") {
   switch (type) {
     // Confrim user is authenticated
     case "user":
@@ -26,7 +26,7 @@ function confirm(req: CallableRequest<any>, type: "user" | "admin") {
 
     // Confirm user is admin
     case "admin":
-      confirm(req, "user")
+      confirmUserState(req, "user")
       const auth = req.auth
 
       if (!auth) {
@@ -46,9 +46,10 @@ admin.initializeApp({
 })
 
 export const setAdminRole = onCall(async (req): Promise<SetAdminRole["res"]> => {
-  confirm(req, "admin")
+  confirmUserState(req, "admin")
   const { uid } = req.data as SetAdminRole["req"]
 
+  // Set custom claim for admin role
   await admin.auth().setCustomUserClaims(uid, {
     role: "admin"
   })
@@ -57,17 +58,19 @@ export const setAdminRole = onCall(async (req): Promise<SetAdminRole["res"]> => 
 })
 
 export const subscribeAll = onCall(async (req): Promise<SubscribeAll["res"]> => {
-  confirm(req, "user")
+  confirmUserState(req, "user")
   const { token } = req.data as SubscribeAll["req"]
 
+  // Subscribe to topic for all users
   await admin.messaging().subscribeToTopic(token, "all-users")
   return { success: true }
 })
 
 export const sendNotice = onCall(async (req): Promise<SendNotice["res"]> => {
-  confirm(req, "admin")
+  confirmUserState(req, "admin")
   const { title, body } = req.data as SendNotice["req"]
 
+  // Send notice
   await admin.messaging().send({
     topic: "all-users",
     notification: {

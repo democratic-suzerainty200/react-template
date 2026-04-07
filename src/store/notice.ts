@@ -1,4 +1,5 @@
-// This store manages notice permissions.
+// This store manages notice mode state of settings.
+// It uses storage features of Zustand middleware.
 
 import { create } from "zustand"
 import { persist, createJSONStorage } from "zustand/middleware"

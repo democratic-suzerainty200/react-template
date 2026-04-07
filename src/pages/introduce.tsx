@@ -6,7 +6,7 @@ import { env } from "@/lib/env"
 import { cn } from "@/lib/utils"
 import { TypeAnimation } from "react-type-animation"
 import { useTranslation } from "react-i18next"
-import { useMediaWidth } from "@/hooks/useMediaWidth"
+import { useMediaWidth } from "@/hooks/mediaWidth"
 
 // Components
 import { Button } from "@/components/ui/button"

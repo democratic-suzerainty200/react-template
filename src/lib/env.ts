@@ -1,4 +1,4 @@
-// This file defines environment variables.
+// This variable contains environment variables.
 
 export const env = {
   title: import.meta.env.VITE_TITLE,

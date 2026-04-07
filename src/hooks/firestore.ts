@@ -5,6 +5,6 @@ import { doc } from "firebase/firestore"
 import { db } from "@/lib/firebase"
 
 export function useFirestore(...path: [string, string, ...string[]]) {
-  const [value, loading, error] = useDocument(doc(db, ...path))
-  return { value, loading, error }
+  const [firestoreResult, firestoreLoading, firestoreError] = useDocument(doc(db, ...path))
+  return { firestoreResult, firestoreLoading, firestoreError }
 }

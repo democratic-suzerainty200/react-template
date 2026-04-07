@@ -61,6 +61,7 @@
   - `Firebase Console`にアクセスしてプロジェクトを作成してください。
   - `Blazeプラン`にしてください。
   - AuthenticationでEmail、Google、匿名のログインを有効にしてください。
+  - Firestore、Functions、Storageの場所設定を使用される地域周辺に設定してください。
   - 環境変数をメモしておいてください。
     - VAP IDキーも必要です
 

@@ -1,13 +1,11 @@
-// This file is a store manages loading states.
+// This store manages sign-in loading state.
 
 import { create } from "zustand"
 
-type Sign =  {
+export const useSignLoadingStore = create<{
   signinLoading: boolean
   setSigninLoading: (value: boolean) => void
-}
-
-export const useSignLoadingStore = create<Sign>()(
+}>()(
   (set) => ({
     signinLoading: false,
     setSigninLoading: (value: boolean) => set({ signinLoading: value })

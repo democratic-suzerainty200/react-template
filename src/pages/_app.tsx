@@ -1,29 +1,37 @@
 // This components is main layout page.
 // It uses for setup hooks.
 
-import { useLoading } from "@/hooks/loading"
+// Hooks
+import { useRootLoadingStore } from "@/store/rootLoading"
+import { useAuthStore } from "@/store/auth"
 
 // Components
 import { Outlet } from "react-router-dom"
-import { LoaderIcon } from "lucide-react"
+import { LoadingParts } from "@/components/mine/parts/loading"
 import { Toaster } from "@/components/ui/sonner"
 
 // Setup hooks
-import { useAuthRedirectSetup } from "@/setup/hooks/useSignSetup"
+import { useAuthRedirectSetup } from "@/setup/hooks/useAuthRedirectSetup"
 import { useAuthStoreSetup } from "@/setup/hooks/useAuthSetup"
 import { useTitleSetup } from "@/setup/hooks/useTitleSetup"
 import { useThemeSetup } from "@/setup/hooks/useThemeSetup"
 import { useNoticeSetup } from "@/setup/hooks/useNoticeSetup"
 
-function Loading({ className, ...props }: React.ComponentProps<"svg">) {
-  return (
-    <LoaderIcon
-      role="status"
-      aria-label="Loading"
-      className="size-7 text-foreground/30 animate-spin"
-      {...props}
-    />
-  )
+function useLoading() {
+  const { userLoading: allLoading } = useAuthStore()
+  return { allLoading }
+}
+
+function LoadingFade() {
+  const { rootLoading } = useRootLoadingStore()
+
+  if (rootLoading) {
+    return (
+      <div className="fixed inset-0 bg-background/70 backdrop-blur flex items-center justify-center z-100">
+        <LoadingParts />
+      </div>
+    )
+  }
 }
 
 export default function Layout() {
@@ -35,12 +43,12 @@ export default function Layout() {
   useNoticeSetup()
 
   // Hooks
-  const { loading } = useLoading()
+  const { allLoading } = useLoading()
 
   // Display loading
-  if (loading) return (
-    <div className="bg-background min-h-svh w-full flex items-center justify-center">
-      <Loading />
+  if (allLoading) return (
+    <div className="fixed inset-0 bg-background backdrop-blur flex items-center justify-center z-100">
+        <LoadingParts />
     </div>
   )
 
@@ -48,6 +56,7 @@ export default function Layout() {
     <div className="bg-background text-foreground min-h-svh w-full wrap-break-word">
       <Outlet />
       <Toaster />
+      <LoadingFade />
     </div>
   )
 }

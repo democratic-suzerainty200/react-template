@@ -1,3 +1,6 @@
+// This module is used to set admin role for a user.
+// You will not be using it.
+
 import admin from "firebase-admin"
 import secretJson from "../../../../functions/src/secret.json" with { type: "json" }
 import type { ServiceAccount } from "firebase-admin"
