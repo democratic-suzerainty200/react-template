@@ -4,12 +4,12 @@ import { useFirestore } from "@/hooks/firestore"
 
 export default function App() {
   const { id } = useParams()
-  const { value, loading, error } = useFirestore("notice", id || "")
+  const { firestoreResult, firestoreLoading, firestoreError } = useFirestore("notice", id || "")
 
-  if (loading) return
+  if (firestoreLoading) return
 
-  if (error) {
-    console.log(error)
+  if (firestoreError) {
+    console.log(firestoreError)
 
     return (
       <SimpleTemplate title="ERROR">
@@ -18,7 +18,7 @@ export default function App() {
     )
   }
 
-  const data = value?.data()
+  const data = firestoreResult?.data()
 
   if (!id || !data) return (
     <SimpleTemplate title="Notice Not Found" />

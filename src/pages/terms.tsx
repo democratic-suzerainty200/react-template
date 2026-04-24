@@ -9,13 +9,13 @@ import { SimpleTemplate } from "@/components/mine/templates/simple"
 function Terms() {
   const { t } = useTranslation()
 
-  const { value, loading, error } = useFirestore("public", "terms")
-  const termsData = value?.data()
+  const { firestoreResult, firestoreLoading, firestoreError } = useFirestore("public", "terms")
+  const termsData = firestoreResult?.data()
 
-  if (loading) return null
+  if (firestoreLoading) return null
 
-  if (error) {
-    errorLog(error)
+  if (firestoreError) {
+    errorLog(firestoreError)
     return <p>{t("common.error.main")}</p>
   }
 

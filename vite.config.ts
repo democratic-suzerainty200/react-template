@@ -9,6 +9,7 @@ import react from "@vitejs/plugin-react-swc"
 import tailwindcss from "@tailwindcss/vite"
 import generouted from "@generouted/react-router/plugin"
 import changeHtml from "./projectSettings/plugins/changeHtml"
+import changeSettingFiles from "./projectSettings/plugins/changeSettingFiles"
 
 function confirmEnv(env: Record<string, string>) {
   const missingNum: string[] = []
@@ -44,6 +45,7 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
       generouted(),
+      changeSettingFiles(),
       changeHtml()
     ],
 

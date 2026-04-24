@@ -8,7 +8,6 @@
         "viewProject": "View Project"
       }
     },
-
     "o": {
       "signin": {
         "title": "Sign In",
@@ -17,7 +16,6 @@
           "announce": "Don't have an account?"
         }
       },
-
       "signup": {
         "title": "Sign Up",
         "main": {
@@ -26,15 +24,13 @@
         }
       }
     },
-
     "i": {
       "admin": {
         "title": "Admin Dashboard"
       }
     },
-
     "introduce": {
-      "title": "Simple React Template",
+      "title": "Modern React Template",
       "main": {
         "getStarted": "Get Started",
         "viewUpdates": "View Notice",
@@ -45,12 +41,10 @@
               "title": "High level of customization",
               "description": "Since it's not a framework, you can customize it as you see fit."
             },
-
             {
               "title": "Modern design system",
               "description": "A modern design using Tailwind CSS, Shadcn UI, and Framer Motion."
             },
-
             {
               "title": "Latest technology",
               "description": "It's designed to be the best template, incorporating cutting-edge technology."
@@ -59,22 +53,18 @@
         }
       }
     },
-
     "privacy": {
       "title": "Privacy Policy",
       "description": "This page contains the privacy policy for using the service. Please read the policy before using the service and understand how your personal information is used."
     },
-
     "terms": {
       "title": "Terms of Service",
       "description": "This page contains the terms of service for using the service. Please read the policy before using the service and understand the prohibited activities."
     },
-
     "notfound": {
       "title": "404 Not Found",
       "description": "Sorry, the page you are looking for could not be found."
     },
-
     "settings": {
       "title": "Settings",
       "main": {
@@ -87,20 +77,17 @@
               "description": "You can connect your guest account with a Google account to access more services.",
               "button": "Sign in with Google to connect"
             },
-
             "signout": {
               "title": "Sign out from this device",
               "button": "Sign out",
               "warning": "If you have a guest account, your data will be deleted."
             },
-
             "deleteAccount": {
               "title": "Delete Account",
               "button": "Delete",
               "warning": "Deleting your account will remove all your data."
             }
           },
-
           "accessibility": {
             "title": "Accessibility",
             "dark": "Dark Mode",
@@ -113,7 +100,6 @@
         }
       }
     },
-
     "notice": {
       "title": "Notice",
       "pages": {
@@ -123,20 +109,17 @@
       }
     }
   },
-
   "components": {
     "backButton": {
       "goBack": "Go Back",
       "goHome": "Go Home"
     },
-    
-    "dialog":  {
+    "dialog": {
       "continue": "Continue",
       "cancel": "Cancel",
       "confirm": "Are you sure?"
     }
   },
-
   "toast": {
     "notice": {
       "denied": {
@@ -145,18 +128,15 @@
         "off": "Turn off"
       }
     },
-
     "sign": {
       "signin": "Signed in",
       "delete": "Account deleted",
       "signout": "Signed out",
-
       "update": {
         "google": "Google account connected"
       }
     }
   },
-
   "common": {
     "sign": {
       "warning": "By continuing, you agree to the following policies.",
@@ -166,13 +146,11 @@
         "google": "Continue with Google"
       }
     },
-
     "error": {
       "title": "ERROR",
       "main": "An error has occurred.",
       "noData": "No data available."
     },
-
     "notice": {
       "on": {
         "title": "Notice is subscribed!",

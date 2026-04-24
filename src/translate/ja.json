@@ -8,7 +8,6 @@
         "viewProject": "プロジェクトを見る"
       }
     },
-
     "o": {
       "signin": {
         "title": "サインイン",
@@ -17,7 +16,6 @@
           "announce": "アカウントをお持ちでないですか？"
         }
       },
-
       "signup": {
         "title": "サインアップ",
         "main": {
@@ -26,15 +24,13 @@
         }
       }
     },
-
     "i": {
       "admin": {
         "title": "管理ダッシュボード"
       }
     },
-
     "introduce": {
-      "title": "シンプルなReactテンプレート",
+      "title": "Modern React Template",
       "main": {
         "getStarted": "始めましょう",
         "viewUpdates": "お知らせ",
@@ -45,12 +41,10 @@
               "title": "高度なカスタマイズ性",
               "description": "フレームワークではないため、あなたの好きなようにカスタマイズが可能"
             },
-
             {
               "title": "モダンなデザインシステム",
               "description": "Tailwind CSS、Shadcn UI、Framer Motionを使用したモダンなデザイン"
             },
-
             {
               "title": "最新の技術",
               "description": "最先端の技術を統合した、最高のテンプレートとして設計"
@@ -59,22 +53,18 @@
         }
       }
     },
-
     "privacy": {
       "title": "プライバシーポリシー",
       "description": "このページはサービスを使用するにあたってのプライバシーポリシーが記載されています。本サービスをご利用になる前に、ポリシーをお読みいただき、個人情報がどのように使用されるかをご理解ください。"
     },
-
     "terms": {
       "title": "利用規約",
       "description": "このページはサービスを使用するにあたっての利用規約が記載されています。本サービスをご利用になる前に、ポリシーをお読みいただき、禁止事項などをご理解ください。"
     },
-
     "notfound": {
       "title": "404 Not Found",
       "description": "申し訳ありませんが、お探しのページは見つかりませんでした。"
     },
-
     "settings": {
       "title": "設定",
       "main": {
@@ -87,20 +77,17 @@
               "description": "ゲストアカウントをGoogleアカウントと連携してより多くのサービスを受けることができます。",
               "button": "Googleにサインインして連携する"
             },
-
             "signout": {
               "title": "このデバイスからサインアウトする",
               "button": "サインアウト",
               "warning": "もしゲストアカウントの場合、データは削除されます。"
             },
-
             "deleteAccount": {
               "title": "アカウントを削除する",
               "button": "削除",
               "warning": "アカウントを削除するとデータがすべて消えることになります。"
             }
           },
-
           "accessibility": {
             "title": "アクセシビリティ",
             "dark": "ダークモード",
@@ -113,7 +100,6 @@
         }
       }
     },
-
     "notice": {
       "title": "お知らせ",
       "pages": {
@@ -123,20 +109,17 @@
       }
     }
   },
-
   "components": {
     "backButton": {
       "goBack": "戻る",
       "goHome": "ホームへ"
     },
-    
-    "dialog":  {
+    "dialog": {
       "continue": "続行",
       "cancel": "キャンセル",
       "confirm": "確認"
     }
   },
-
   "toast": {
     "notice": {
       "denied": {
@@ -145,18 +128,15 @@
         "off": "オフにする"
       }
     },
-
     "sign": {
       "signin": "サインインしました",
       "delete": "アカウントを削除しました",
       "signout": "サインアウトしました",
-
       "update": {
         "google": "Googleアカウントと連携しました"
       }
     }
   },
-
   "common": {
     "sign": {
       "warning": "続行することであなたは次のポリシーに同意したことになります。",
@@ -166,13 +146,11 @@
         "google": "Googleで続ける"
       }
     },
-
     "error": {
       "title": "エラー",
       "main": "エラーが発生しました。",
       "noData": "データが存在していません。"
     },
-
     "notice": {
       "on": {
         "title": "通知が有効になりました！",
